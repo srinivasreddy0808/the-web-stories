@@ -58,4 +58,7 @@
   .mobileActive {
     display: none;
   }
+  .loadingSpinner::before {
+    left: 40%;
+  }
 }
