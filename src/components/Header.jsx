@@ -36,6 +36,11 @@ const Header = ({ user, logout, setShowBookmarks, setYourStory }) => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  const onLogout = () => {
+    logout();
+    navigate("/");
+  };
   return (
     <>
       <header className={styles.header}>
@@ -76,7 +81,7 @@ const Header = ({ user, logout, setShowBookmarks, setYourStory }) => {
                   <p className={styles.userName}>
                     {userName?.slice(0, 10) || "Your Name"}
                   </p>
-                  <button onClick={logout} className={styles.logoutBtn}>
+                  <button onClick={onLogout} className={styles.logoutBtn}>
                     Logout
                   </button>
                 </div>
@@ -111,7 +116,7 @@ const Header = ({ user, logout, setShowBookmarks, setYourStory }) => {
                     <Bookmark style={{ fill: "#fff" }} />
                     Bookmarks
                   </button>
-                  <button onClick={logout} className={styles.addStoryBtn}>
+                  <button onClick={onLogout} className={styles.addStoryBtn}>
                     Logout
                   </button>
                 </div>
@@ -145,7 +150,7 @@ const Header = ({ user, logout, setShowBookmarks, setYourStory }) => {
                 className={`${styles.mobileActive} ${styles.mobileActiveCard}`}
               >
                 <div className={styles.crossIcon}>
-                  <X />
+                  <X onClick={toggleMenu} />
                 </div>
                 <button
                   className={styles.registerBtn}

@@ -4,6 +4,7 @@ import InputField from "./InputField";
 import styles from "./Modal.module.css";
 import { useUser } from "../context/userContext";
 import { useNavigate } from "react-router-dom";
+import { showToast } from "../components/Toastify";
 
 const LoginModal = () => {
   const [username, setUsername] = useState("");
@@ -38,6 +39,10 @@ const LoginModal = () => {
       setError("An error occurred. Please try again.");
     }
   };
+
+  if (error) {
+    showToast("error", error);
+  }
 
   return (
     <Modal onClose={onClose} title="Login">
