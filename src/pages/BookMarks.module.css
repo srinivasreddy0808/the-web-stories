@@ -1,0 +1,167 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.bookmarksBtn,
+.addStoryBtn,
+.logoutBtn,
+.menuBtn {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.bookmarksBtn {
+  background-color: #ff7e95;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.bookmarksBtn svg {
+  margin-right: 5px;
+}
+
+.addStoryBtn {
+  background-color: #ff9da3;
+  color: white;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userName {
+  margin-right: 10px;
+}
+
+.logoutBtn {
+  background-color: transparent;
+  color: #333;
+}
+
+.menuBtn {
+  background-color: transparent;
+  color: #333;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bookmarksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.bookmarkCard {
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 14px;
+  overflow: visible;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 459px;
+}
+
+.bookmarkImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradientOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.contentContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  z-index: 1;
+  border-radius: 14px;
+}
+.bookmarkHeading {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin: 0;
+}
+
+.bookmarkDescription {
+  color: white;
+  font-size: 14px;
+  padding: 0 15px 15px;
+  margin: 0;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .userSection {
+    margin-top: 10px;
+  }
+
+  .bookmarksGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

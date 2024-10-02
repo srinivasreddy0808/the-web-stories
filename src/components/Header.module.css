@@ -1,0 +1,170 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 15px 0px #00000026;
+  padding: 10px;
+}
+
+.registerBtn,
+.signInBtn {
+  /*   padding: 10px 20px;
+ */
+  border: none;
+  cursor: pointer;
+  width: 136px;
+  height: 45px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.44px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.registerBtn {
+  background-color: #ff7373;
+  color: white;
+}
+
+.signInBtn {
+  background-color: #73abff;
+  color: white;
+}
+
+/* Logged in state elements */
+.bookmarksBtn,
+.addStoryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  background-color: #ff7373;
+
+  width: 136px;
+  height: 45px;
+  border-radius: 20px;
+  border: none;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19.53px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.bookmarksBtn svg,
+.addStoryBtn svg {
+  margin-right: 0.1rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 4px 10px 0px #0000000d;
+
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.menuBtn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: #333;
+  padding: 0.5rem;
+}
+
+.menuCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 70px;
+  right: 0rem;
+  width: 251px;
+  height: 170px;
+  background-color: white;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 4px;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.userName {
+  font-weight: bold;
+  margin-right: 1rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 23.44px;
+  text-align: center;
+  border-radius: 20px;
+  color: #000000;
+}
+
+.logoutBtn {
+  background-color: #ff7373;
+
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 136px;
+  height: 45px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.44px;
+  text-align: center;
+  border-radius: 20px;
+}
+.desktopActive {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.mobileActive {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktopActive {
+    display: none;
+  }
+  .mobileActive {
+    display: inline-block;
+  }
+  .menuCard {
+    display: none;
+  }
+  .mobileActiveCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 60px;
+    right: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border-radius: 4px;
+    padding: 1rem;
+    z-index: 20;
+  }
+  .avatarSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

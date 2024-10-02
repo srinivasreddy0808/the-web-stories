@@ -1,0 +1,114 @@
+.filterContainer {
+  position: relative;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.filterScroll {
+  display: flex;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 10px 0;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.filterScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.filterBtn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  width: 235px;
+  height: 235px;
+  border: none;
+
+  border-radius: 20px;
+  background-color: #f1f3f5;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.filterBtn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.filterOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+.overlayText {
+  font-family: "DM Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39.06px;
+  text-align: center;
+}
+
+.filterBtn.active {
+  border: 5px solid #00acd2;
+  background-color: #339af0;
+  color: white;
+}
+
+.scrollBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.leftBtn {
+  left: 20px;
+}
+
+.rightBtn {
+  right: 20px;
+}
+
+.filterSection {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .filterBtn {
+    width: 140px;
+    height: 90px;
+  }
+  .filterContainer {
+    margin-bottom: 10px;
+  }
+  .filterScroll {
+    gap: 15px;
+  }
+}

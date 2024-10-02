@@ -1,0 +1,3 @@
+# the web stories sharing web app
+
+this web app is used to build using vanilla react, module.css ,vite ...
