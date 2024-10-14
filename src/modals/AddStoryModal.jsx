@@ -155,7 +155,7 @@ const AddStoryModal = () => {
     try {
       const response = await fetch(
         `${import.meta.env.VITE_API_BASE_URL}/api/v1/stories/story${
-          isEdit ? `${location.state._id}` : ""
+          isEdit ? `/${location.state._id}` : ""
         }`,
         {
           method: `${isEdit ? "PUT" : "POST"}`,
