@@ -23,6 +23,8 @@ const AddStoryModal = () => {
   const [error, setError] = useState("");
   const [videoErrors, setVideoErrors] = useState({});
 
+  const isEdit = location.state?.isEdit;
+
   const onClose = () => navigate("/");
 
   const checkVideoDuration = (url, slideIndex) => {
@@ -152,9 +154,11 @@ const AddStoryModal = () => {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_BASE_URL}/api/v1/stories/story`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/v1/stories/story${
+          isEdit ? `${location.state._id}` : ""
+        }`,
         {
-          method: "POST",
+          method: `${isEdit ? "PUT" : "POST"}`,
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${user.token}`, // Add the token to the headers

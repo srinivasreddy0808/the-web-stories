@@ -36,7 +36,7 @@ const StoryGrid = ({ stories, title, showEdit = false, className = "" }) => {
 
   const handleEditClick = (e, story) => {
     e.stopPropagation();
-    navigate(`/add-story`, { state: { ...story } });
+    navigate(`/add-story`, { state: { ...story, isEdit: showEdit } });
     console.log(story, "story");
   };
 
